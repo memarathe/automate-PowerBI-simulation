@@ -13,3 +13,23 @@ This project demonstrates how to use Playwright to automate UI testing for a Pow
 
 ## Why Playwright?
 Power BI visuals render dynamically and don’t expose direct testing hooks. Playwright makes it possible to simulate real user actions (clicks, navigation, filtering) and capture the underlying data calls, ensuring end-to-end validation of report refresh behavior.
+
+
+## 1. Install dependencies
+npm install
+
+## 2. Capture authentication (first time only)
+npx playwright codegen <powerbi_report_url>
+## perform login manually
+## save session in script:
+## await context.storageState({ path: 'auth.json' });
+
+node auth.setup.js   # generates auth.json
+
+## 3. Run tests using saved auth
+## (ensure playwright.config.js has: use: { storageState: 'auth.json' })
+npx playwright test
+
+## 4. If session expires
+rm auth.json
+node auth.setup.js
