@@ -2,7 +2,7 @@
 This project demonstrates how to use Playwright to automate UI testing for a Power BI report. The script simulates real user interactions with the Power BI service to validate that report visuals refresh correctly after applying filters or interacting with slicers.
 
 ## Flow diagram
-<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/343b56b0-7e77-4500-a1f4-b84ac96c538f" />
+<img width="600" height="600" alt="image" src="https://github.com/user-attachments/assets/343b56b0-7e77-4500-a1f4-b84ac96c538f" />
 
 ## Key Features
 **Automates login using a saved auth session (auth.json).**
